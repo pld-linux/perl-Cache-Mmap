@@ -1,21 +1,21 @@
 #
 # Conditional build:
-# _without_tests - do not perform "make test"
-#
+%bcond_without	tests	# do not perform "make test"
+
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	Cache
 %define		pnam	Mmap
 Summary:	Cache::Mmap - Shared data cache using memory mapped files
 Summary(pl):	Cache::Mmap - Wspó³dzielony bufor danych, u¿ywaj±cy mapowanych w pamiêci plików
 Name:		perl-Cache-Mmap
-Version:	0.07
+Version:	0.08
 Release:	1
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	1288f95fa9a86a83c0884602b69597f1
-BuildRequires:	perl-devel >= 5
-%if %{?_without_tests:0}%{!?_without_tests:1}
+# Source0-md5:	f0074b7d13cb2a36cb134c0274c4c2d7
+BuildRequires:	perl-devel >= 5.8.0
+%if %{with tests}
 BuildRequires:	perl(Storable)
 BuildRequires:	perl-Test-Simple
 %endif
@@ -43,13 +43,15 @@ miarê potrzeby.
 %build
 %{__perl} Makefile.PL \
 	INSTALLDIRS=vendor
-%{__make}
+%{__make} \
+	OPTIMIZE="%{rpmcflags}"
 
-%{!?_without_tests:%{__make} test}
+%{?with_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
