@@ -3,8 +3,8 @@
 %bcond_without	tests	# do not perform "make test"
 
 %include	/usr/lib/rpm/macros.perl
-%define		pdir	Cache
-%define		pnam	Mmap
+%define	pdir	Cache
+%define	pnam	Mmap
 Summary:	Cache::Mmap - shared data cache using memory mapped files
 Summary(pl):	Cache::Mmap - wspó³dzielony bufor danych, u¿ywaj±cy mapowanych w pamiêci plików
 Name:		perl-Cache-Mmap
