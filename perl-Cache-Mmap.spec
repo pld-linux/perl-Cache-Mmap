@@ -10,7 +10,7 @@ Summary(pl):	Cache::Mmap - wspó³dzielony bufor danych, u¿ywaj±cy mapowanych w pa
 Name:		perl-Cache-Mmap
 Version:	0.081
 Release:	1
-License:	GPL/Artistic
+License:	GPL or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	3170cbdf4232f5b2c578d5cd81527693
