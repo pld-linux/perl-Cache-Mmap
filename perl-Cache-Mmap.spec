@@ -1,14 +1,15 @@
 #
 # Conditional build:
 # _without_tests - do not perform "make test"
+#
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	Cache
-%define	pnam	Mmap
+%define		pdir	Cache
+%define		pnam	Mmap
 Summary:	Cache::Mmap - Shared data cache using memory mapped files
 Summary(pl):	Cache::Mmap - Wspó³dzielony bufor danych, u¿ywaj±cy mapowanych w pamiêci plików
 Name:		perl-Cache-Mmap
 Version:	0.05
-Release:	1
+Release:	2
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -51,8 +52,10 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Change* README Todo
-%{perl_sitearch}/%{pdir}/*.pm
-%dir %{perl_sitearch}/auto/%{pdir}/%{pnam}
-%attr(755,root,root) %{perl_sitearch}/auto/%{pdir}/%{pnam}/*.so
-%{perl_sitearch}/auto/%{pdir}/%{pnam}/*.bs
+%dir %{perl_sitearch}/Cache
+%{perl_sitearch}/Cache/*.pm
+%dir %{perl_sitearch}/auto/Cache
+%dir %{perl_sitearch}/auto/Cache/Mmap
+%attr(755,root,root) %{perl_sitearch}/auto/Cache/Mmap/*.so
+%{perl_sitearch}/auto/Cache/Mmap/*.bs
 %{_mandir}/man3/*
