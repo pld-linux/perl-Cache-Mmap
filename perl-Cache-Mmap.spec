@@ -9,7 +9,7 @@ Summary:	Cache::Mmap - Shared data cache using memory mapped files
 Summary(pl):	Cache::Mmap - Wspó³dzielony bufor danych, u¿ywaj±cy mapowanych w pamiêci plików
 Name:		perl-Cache-Mmap
 Version:	0.05
-Release:	2
+Release:	3
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -18,7 +18,7 @@ BuildRequires:	perl >= 5
 BuildRequires:	perl(Storable)
 BuildRequires:	perl-Test-Simple
 %endif
-BuildRequires:	rpm-perlprov >= 3.0.3-16
+BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -40,7 +40,8 @@ miarê potrzeby.
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
-%{__perl} Makefile.PL
+%{__perl} Makefile.PL \
+	INSTALLDIRS=vendor 
 %{__make}
 
 %{!?_without_tests:%{__make} test}
@@ -55,10 +56,10 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Change* README Todo
-%dir %{perl_sitearch}/Cache
-%{perl_sitearch}/Cache/*.pm
-%dir %{perl_sitearch}/auto/Cache
-%dir %{perl_sitearch}/auto/Cache/Mmap
-%attr(755,root,root) %{perl_sitearch}/auto/Cache/Mmap/*.so
-%{perl_sitearch}/auto/Cache/Mmap/*.bs
+%dir %{perl_vendorarch}/Cache
+%{perl_vendorarch}/Cache/*.pm
+%dir %{perl_vendorarch}/auto/Cache
+%dir %{perl_vendorarch}/auto/Cache/Mmap
+%attr(755,root,root) %{perl_vendorarch}/auto/Cache/Mmap/*.so
+%{perl_vendorarch}/auto/Cache/Mmap/*.bs
 %{_mandir}/man3/*
