@@ -5,8 +5,8 @@
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	Cache
 %define		pnam	Mmap
-Summary:	Cache::Mmap - Shared data cache using memory mapped files
-Summary(pl):	Cache::Mmap - Wspó³dzielony bufor danych, u¿ywaj±cy mapowanych w pamiêci plików
+Summary:	Cache::Mmap - shared data cache using memory mapped files
+Summary(pl):	Cache::Mmap - wspó³dzielony bufor danych, u¿ywaj±cy mapowanych w pamiêci plików
 Name:		perl-Cache-Mmap
 Version:	0.081
 Release:	1
