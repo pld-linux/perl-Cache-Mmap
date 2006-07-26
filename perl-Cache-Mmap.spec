@@ -8,12 +8,14 @@
 Summary:	Cache::Mmap - shared data cache using memory mapped files
 Summary(pl):	Cache::Mmap - wspó³dzielony bufor danych, u¿ywaj±cy mapowanych w pamiêci plików
 Name:		perl-Cache-Mmap
-Version:	0.081
+Version:	0.09
 Release:	1
+Epoch:		1
 License:	GPL or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	3170cbdf4232f5b2c578d5cd81527693
+# Source0-md5:	fef44673771a0f1f14982ae719f57221
+URL:		http://search.cpan.org/dist/Cache-Mmap/
 BuildRequires:	perl-devel >= 1:5.8.0
 %if %{with tests}
 BuildRequires:	perl-Test-Simple
