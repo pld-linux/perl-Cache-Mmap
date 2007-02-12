@@ -6,7 +6,7 @@
 %define		pdir	Cache
 %define		pnam	Mmap
 Summary:	Cache::Mmap - shared data cache using memory mapped files
-Summary(pl):	Cache::Mmap - wspó³dzielony bufor danych, u¿ywaj±cy mapowanych w pamiêci plików
+Summary(pl.UTF-8):   Cache::Mmap - wspÃ³Å‚dzielony bufor danych, uÅ¼ywajÄ…cy mapowanych w pamiÄ™ci plikÃ³w
 Name:		perl-Cache-Mmap
 Version:	0.09
 Release:	1
@@ -30,13 +30,13 @@ access to the cache is completely transparent, and the module handles
 all the details of refreshing cache contents, and updating underlying
 data, if necessary.
 
-%description -l pl
-Ten modu³ jest implementacj± wspó³dzielonego bufora (cache) danych,
-u¿ywaj±cego plików mapowanych w pamiêci. Je¶li s± dostarczone funkcje
-wspó³pracuj±ce z podlegaj±cymi danymi, dostêp do bufora jest
-ca³kowicie przezroczysty, a modu³ obs³uguje wszystkie szczegó³y
-od¶wie¿ania zawarto¶ci bufora i uaktualniania buforowanych danych w
-miarê potrzeby.
+%description -l pl.UTF-8
+Ten moduÅ‚ jest implementacjÄ… wspÃ³Å‚dzielonego bufora (cache) danych,
+uÅ¼ywajÄ…cego plikÃ³w mapowanych w pamiÄ™ci. JeÅ›li sÄ… dostarczone funkcje
+wspÃ³Å‚pracujÄ…ce z podlegajÄ…cymi danymi, dostÄ™p do bufora jest
+caÅ‚kowicie przezroczysty, a moduÅ‚ obsÅ‚uguje wszystkie szczegÃ³Å‚y
+odÅ›wieÅ¼ania zawartoÅ›ci bufora i uaktualniania buforowanych danych w
+miarÄ™ potrzeby.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
