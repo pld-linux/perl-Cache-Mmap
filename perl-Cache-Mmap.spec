@@ -6,7 +6,7 @@
 %define		pdir	Cache
 %define		pnam	Mmap
 Summary:	Cache::Mmap - shared data cache using memory mapped files
-Summary(pl.UTF-8):   Cache::Mmap - współdzielony bufor danych, używający mapowanych w pamięci plików
+Summary(pl.UTF-8):	Cache::Mmap - współdzielony bufor danych, używający mapowanych w pamięci plików
 Name:		perl-Cache-Mmap
 Version:	0.09
 Release:	1
