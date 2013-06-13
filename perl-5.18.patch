@@ -1,0 +1,11 @@
+--- Cache-Mmap-0.081/Mmap.pm~	2004-03-15 17:34:18.000000000 +0100
++++ Cache-Mmap-0.081/Mmap.pm	2013-06-13 16:55:48.624501816 +0200
+@@ -17,7 +17,7 @@
+ 
+ package Cache::Mmap;
+ 
+-use constant has_utf8 => defined($^V) && $^V ge "\5\6\0";
++use constant has_utf8 => 1; # defined($^V) && $^V ge "\5\6\0";
+ 
+ use Carp qw(croak);
+ use DynaLoader();
