@@ -68,5 +68,4 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{perl_vendorarch}/auto/Cache
 %dir %{perl_vendorarch}/auto/Cache/Mmap
 %attr(755,root,root) %{perl_vendorarch}/auto/Cache/Mmap/*.so
-%{perl_vendorarch}/auto/Cache/Mmap/*.bs
 %{_mandir}/man3/*
