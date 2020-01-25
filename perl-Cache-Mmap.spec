@@ -2,7 +2,6 @@
 # Conditional build:
 %bcond_without	tests	# do not perform "make test"
 
-%include	/usr/lib/rpm/macros.perl
 %define		pdir	Cache
 %define		pnam	Mmap
 Summary:	Cache::Mmap - shared data cache using memory mapped files
